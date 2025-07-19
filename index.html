@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Репетитор по ЕГЭ и ОГЭ | Иван Копытов</title>
+    
+    <!-- PWA Обязательные мета-теги -->
+    <meta name="theme-color" content="#3a7bd5">
+    <meta name="description" content="Профессиональный репетитор по подготовке к ЕГЭ и ОГЭ. Индивидуальный подход к каждому ученику.">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Репетитор ЕГЭ/ОГЭ">
+    
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+    <!-- Основные стили -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #3a7bd5;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        h3 {
+            color: #3a7bd5;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        button {
+            background: #3a7bd5;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #2c5fb3;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+        }
+
+        /* Стиль для кнопки установки PWA */
+        .install-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+
+        .install-btn:hover {
+            background: #45a049;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 20px 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Кнопка установки PWA -->
+    <button id="installBtn" class="install-btn" title="Установить приложение">Установить</button>
+
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <h1>ДОБРО ПОЖАЛОВАТЬ</h1>
+            <h2>Иван Копытов</h2>
+            <p>Профессиональный репетитор по подготовке к ЕГЭ и ОГЭ. Индивидуальный подход к каждому ученику.</p>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="container">
+        <!-- Раздел ЕГЭ -->
+        <section class="section">
+            <h2>Подготовка к ЕГЭ</h2>
+            <p>Эффективная программа подготовки по авторской методике. Разбор всех заданий, теория и практика.</p>
+        </section>
+
+        <!-- Раздел ОГЭ -->
+        <section class="section">
+            <h2>Подготовка к ОГЭ</h2>
+            <p>Помощь в освоении школьной программы и успешной сдаче экзамена.</p>
+        </section>
+
+        <!-- Раздел "Обо мне" -->
+        <section class="section">
+            <h2>Обо мне</h2>
+            <p>Опыт преподавания — 1 год. Высшее педагогическое образование. Средний балл учеников — 85+.</p>
+        </section>
+
+        <!-- Раздел "Контакты" -->
+        <section class="section">
+            <h2>Свяжитесь со мной</h2>
+            
+            <div class="contact-info">
+                <h3>Контактная информация</h3>
+                <p>Email: kopytovivan8@gmail.com</p>
+                <p>Телефон: +7 (919) 463-57-90</p>
+                <p>Telegram: @daug13r</p>
+            </div>
+            
+            <h3>Форма обратной связи</h3>
+            <form id="feedback-form">
+                <table>
+                    <tr>
+                        <td>Ваше имя:</td>
+                        <td><input type="text" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Ваш email:</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                </table>
+                
+                <label>Сообщение:</label>
+                <textarea rows="5" required></textarea>
+                
+                <label>Интересующий курс:</label>
+                <select>
+                    <option>Подготовка к ЕГЭ</option>
+                    <option>Подготовка к ОГЭ</option>
+                    <option>Школьная программа</option>
+                </select>
+                
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© 2025 Репетитор по ЕГЭ и ОГЭ. Все права защищены.</p>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        // Обработчик формы
+        document.getElementById('feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.');
+            this.reset();
+        });
+
+        // Регистрация Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker зарегистрирован');
+                    })
+                    .catch(function(error) {
+                        console.log('Ошибка регистрации ServiceWorker:', error);
+                    });
+            });
+        }
+
+        // Обработчик кнопки установки PWA
+        let deferredPrompt;
+        const installBtn = document.getElementById('installBtn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Предотвращаем автоматическое отображение подсказки
+            e.preventDefault();
+            // Сохраняем событие для использования позже
+            deferredPrompt = e;
+            // Показываем кнопку установки
+            installBtn.style.display = 'block';
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                // Показываем подсказку установки
+                deferredPrompt.prompt();
+                // Ждем ответа пользователя
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    console.log('Пользователь принял предложение установки');
+                } else {
+                    console.log('Пользователь отклонил предложение установки');
+                }
+                // Очищаем сохраненное событие
+                deferredPrompt = null;
+                // Скрываем кнопку
+                installBtn.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('appinstalled', () => {
+            // Приложение было установлено
+            console.log('PWA установлено');
+            installBtn.style.display = 'none';
+            deferredPrompt = null;
+        });
+
+        // Проверяем, запущено ли приложение как PWA
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            console.log('Запущено как PWA');
+            installBtn.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
